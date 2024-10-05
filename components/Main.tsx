@@ -1,6 +1,5 @@
 "use client";
 import React, { PropsWithChildren } from "react";
-import ComboCart from "./ComboCart";
 
 type MainProps = {} & PropsWithChildren;
 const Main = ({ children }: MainProps) => {
