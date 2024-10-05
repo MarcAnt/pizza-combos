@@ -3,21 +3,68 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fff8f3;
+  /* --background: #fdbb94; */
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fff8f3;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.ticketPrice {
+  transition: all 0.25s ease-in-out;
+}
+
+.addImage {
+  background-image: url("../public/pizza.png");
+  background-repeat: no-repeat;
+  background-size: 5rem 5rem;
+  background-position: -20px 90px;
+}
+
+.comboCard:hover .ticketPrice {
+  transform: rotate(35deg);
+}
+
+.modal {
+  left: calc(50% - 200px);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* .comboCard:hover .ticketPrice span {
+  transform: rotate(-45deg);
+} */
+
+.ticketPrice {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
 }
 
 @layer utilities {
